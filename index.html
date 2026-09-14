@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コーヒー産地別ガイド</title>
-    style.css
+    <meta name="description" content="コーヒーの主要産地ごとの味の特徴や違いをまとめたガイドです。">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <div class="container">
         <h1>☕ コーヒー産地別ガイド</h1>
+
         <p>
             世界の主要なコーヒー生産国ごとの味の特徴や違いをまとめた資料です。
         </p>
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="国名や特徴で検索..."
-        >
+        <div class="search-area">
+            <label for="searchInput">
+                国名や特徴で検索
+            </label>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="例：エチオピア、フルーティー、チョコレート"
+                aria-label="国名や特徴で検索">
+        </div>
     </div>
 </header>
 
@@ -29,32 +37,34 @@
         <h2>味の傾向一覧</h2>
 
         <div class="summary-grid">
-            <div class="summary-card">
+
+            <article class="summary-card">
                 <h3>🍊 フルーティー・華やか</h3>
                 <ul>
                     <li>エチオピア</li>
                     <li>ケニア</li>
                     <li>コスタリカ</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="summary-card">
+            <article class="summary-card">
                 <h3>⚖️ バランス型</h3>
                 <ul>
                     <li>コロンビア</li>
                     <li>グアテマラ</li>
                     <li>パプアニューギニア</li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="summary-card">
+            <article class="summary-card">
                 <h3>🍫 コク・苦味重視</h3>
                 <ul>
                     <li>ブラジル</li>
                     <li>インドネシア</li>
                     <li>ベトナム</li>
                 </ul>
-            </div>
+            </article>
+
         </div>
     </section>
 
@@ -66,9 +76,11 @@
             <article class="country-card">
                 <h3>🇪🇹 エチオピア</h3>
                 <p class="tag">フルーティー</p>
+
                 <p>
-                    コーヒー発祥の地。華やかな香りとベリー系の果実味、
-                    紅茶のような軽やかさが特徴です。
+                    コーヒー発祥の地として知られています。
+                    華やかな香りとベリー系の果実味、
+                    紅茶のような軽やかな口当たりが特徴です。
                 </p>
 
                 <ul>
@@ -81,13 +93,14 @@
             <article class="country-card">
                 <h3>🇰🇪 ケニア</h3>
                 <p class="tag">果実味豊か</p>
+
                 <p>
                     カシスや赤ワインを思わせる濃厚な果実味と、
                     力強い酸味が魅力です。
                 </p>
 
                 <ul>
-                    <li>カシス</li>
+                    <li>カシス感</li>
                     <li>濃厚な香り</li>
                     <li>しっかりしたコク</li>
                 </ul>
@@ -96,13 +109,14 @@
             <article class="country-card">
                 <h3>🇨🇴 コロンビア</h3>
                 <p class="tag">バランス型</p>
+
                 <p>
                     甘み・酸味・コクのバランスがよく、
-                    初心者にもおすすめの代表的な産地です。
+                    初心者にもおすすめされることが多い産地です。
                 </p>
 
                 <ul>
-                    <li>チョコレート感</li>
+                    <li>ミルクチョコレート感</li>
                     <li>ナッツ感</li>
                     <li>穏やかな酸味</li>
                 </ul>
@@ -111,23 +125,27 @@
             <article class="country-card">
                 <h3>🇧🇷 ブラジル</h3>
                 <p class="tag">コク重視</p>
+
                 <p>
-                    世界最大の生産国。酸味が少なく、
-                    ナッツやチョコレートのような味わいです。
+                    世界最大級のコーヒー生産国です。
+                    酸味が控えめで、ナッツやチョコレートのような
+                    まろやかな味わいが特徴です。
                 </p>
 
                 <ul>
-                    <li>アーモンド</li>
-                    <li>チョコレート</li>
-                    <li>まろやか</li>
+                    <li>アーモンド感</li>
+                    <li>チョコレート感</li>
+                    <li>まろやかで飲みやすい</li>
                 </ul>
             </article>
 
             <article class="country-card">
                 <h3>🇬🇹 グアテマラ</h3>
                 <p class="tag">バランス型</p>
+
                 <p>
-                    豊かなコクと甘み、心地よい酸味を兼ね備えます。
+                    豊かなコクと甘み、
+                    心地よい酸味を兼ね備えています。
                 </p>
 
                 <ul>
@@ -140,27 +158,30 @@
             <article class="country-card">
                 <h3>🇨🇷 コスタリカ</h3>
                 <p class="tag">クリーン</p>
+
                 <p>
-                    クリーンな後味と柑橘系の明るい酸味が特徴です。
+                    雑味の少ないクリーンな味わいと、
+                    柑橘系の明るい酸味が特徴です。
                 </p>
 
                 <ul>
                     <li>オレンジ感</li>
                     <li>はちみつのような甘み</li>
-                    <li>爽やか</li>
+                    <li>爽やかな後味</li>
                 </ul>
             </article>
 
             <article class="country-card">
                 <h3>🇮🇩 インドネシア（マンデリン）</h3>
                 <p class="tag">重厚なコク</p>
+
                 <p>
                     深いコクとスパイシーな風味があり、
-                    深煎り好きに人気です。
+                    深煎り好きから高い人気があります。
                 </p>
 
                 <ul>
-                    <li>ダークチョコ</li>
+                    <li>ダークチョコレート感</li>
                     <li>スパイス感</li>
                     <li>酸味控えめ</li>
                 </ul>
@@ -169,24 +190,26 @@
             <article class="country-card">
                 <h3>🇻🇳 ベトナム</h3>
                 <p class="tag">苦味強め</p>
+
                 <p>
-                    ロブスタ種を中心に生産。
-                    苦味とコクが強いコーヒーです。
+                    ロブスタ種を中心に生産されており、
+                    強い苦味と濃厚なコクが特徴です。
                 </p>
 
                 <ul>
-                    <li>強い苦味</li>
-                    <li>濃厚</li>
-                    <li>高カフェイン</li>
+                    <li>しっかりした苦味</li>
+                    <li>濃厚な味わい</li>
+                    <li>比較的高いカフェイン量</li>
                 </ul>
             </article>
 
             <article class="country-card">
                 <h3>🇵🇬 パプアニューギニア</h3>
                 <p class="tag">バランス型</p>
+
                 <p>
-                    フルーティーさとコクを兼ね備えた
-                    飲みやすい味わいです。
+                    フルーティーさとコクを兼ね備えた、
+                    飲みやすい味わいが特徴です。
                 </p>
 
                 <ul>
@@ -202,9 +225,10 @@
 </main>
 
 <footer>
-    <p>コーヒー産地別ガイド</p>
+    <p>&copy; 2026 コーヒー産地別ガイド</p>
 </footer>
 
-script.jsscript>
+<script src="script.js"></script>
+
 </body>
 </html>
