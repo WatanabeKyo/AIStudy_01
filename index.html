@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コーヒー産地別ガイド</title>
+    style.css
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>☕ コーヒー産地別ガイド</h1>
+        <p>
+            世界の主要なコーヒー生産国ごとの味の特徴や違いをまとめた資料です。
+        </p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="国名や特徴で検索..."
+        >
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="summary">
+        <h2>味の傾向一覧</h2>
+
+        <div class="summary-grid">
+            <div class="summary-card">
+                <h3>🍊 フルーティー・華やか</h3>
+                <ul>
+                    <li>エチオピア</li>
+                    <li>ケニア</li>
+                    <li>コスタリカ</li>
+                </ul>
+            </div>
+
+            <div class="summary-card">
+                <h3>⚖️ バランス型</h3>
+                <ul>
+                    <li>コロンビア</li>
+                    <li>グアテマラ</li>
+                    <li>パプアニューギニア</li>
+                </ul>
+            </div>
+
+            <div class="summary-card">
+                <h3>🍫 コク・苦味重視</h3>
+                <ul>
+                    <li>ブラジル</li>
+                    <li>インドネシア</li>
+                    <li>ベトナム</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>産地別一覧</h2>
+
+        <div id="countryList" class="country-grid">
+
+            <article class="country-card">
+                <h3>🇪🇹 エチオピア</h3>
+                <p class="tag">フルーティー</p>
+                <p>
+                    コーヒー発祥の地。華やかな香りとベリー系の果実味、
+                    紅茶のような軽やかさが特徴です。
+                </p>
+
+                <ul>
+                    <li>ジャスミンのような香り</li>
+                    <li>ブルーベリー感</li>
+                    <li>明るい酸味</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇰🇪 ケニア</h3>
+                <p class="tag">果実味豊か</p>
+                <p>
+                    カシスや赤ワインを思わせる濃厚な果実味と、
+                    力強い酸味が魅力です。
+                </p>
+
+                <ul>
+                    <li>カシス</li>
+                    <li>濃厚な香り</li>
+                    <li>しっかりしたコク</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇨🇴 コロンビア</h3>
+                <p class="tag">バランス型</p>
+                <p>
+                    甘み・酸味・コクのバランスがよく、
+                    初心者にもおすすめの代表的な産地です。
+                </p>
+
+                <ul>
+                    <li>チョコレート感</li>
+                    <li>ナッツ感</li>
+                    <li>穏やかな酸味</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇧🇷 ブラジル</h3>
+                <p class="tag">コク重視</p>
+                <p>
+                    世界最大の生産国。酸味が少なく、
+                    ナッツやチョコレートのような味わいです。
+                </p>
+
+                <ul>
+                    <li>アーモンド</li>
+                    <li>チョコレート</li>
+                    <li>まろやか</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇬🇹 グアテマラ</h3>
+                <p class="tag">バランス型</p>
+                <p>
+                    豊かなコクと甘み、心地よい酸味を兼ね備えます。
+                </p>
+
+                <ul>
+                    <li>カカオ感</li>
+                    <li>キャラメル感</li>
+                    <li>しっかりしたボディ</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇨🇷 コスタリカ</h3>
+                <p class="tag">クリーン</p>
+                <p>
+                    クリーンな後味と柑橘系の明るい酸味が特徴です。
+                </p>
+
+                <ul>
+                    <li>オレンジ感</li>
+                    <li>はちみつのような甘み</li>
+                    <li>爽やか</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇮🇩 インドネシア（マンデリン）</h3>
+                <p class="tag">重厚なコク</p>
+                <p>
+                    深いコクとスパイシーな風味があり、
+                    深煎り好きに人気です。
+                </p>
+
+                <ul>
+                    <li>ダークチョコ</li>
+                    <li>スパイス感</li>
+                    <li>酸味控えめ</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇻🇳 ベトナム</h3>
+                <p class="tag">苦味強め</p>
+                <p>
+                    ロブスタ種を中心に生産。
+                    苦味とコクが強いコーヒーです。
+                </p>
+
+                <ul>
+                    <li>強い苦味</li>
+                    <li>濃厚</li>
+                    <li>高カフェイン</li>
+                </ul>
+            </article>
+
+            <article class="country-card">
+                <h3>🇵🇬 パプアニューギニア</h3>
+                <p class="tag">バランス型</p>
+                <p>
+                    フルーティーさとコクを兼ね備えた
+                    飲みやすい味わいです。
+                </p>
+
+                <ul>
+                    <li>柑橘感</li>
+                    <li>カカオ感</li>
+                    <li>クリーンな後味</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>コーヒー産地別ガイド</p>
+</footer>
+
+script.jsscript>
+</body>
+</html>
