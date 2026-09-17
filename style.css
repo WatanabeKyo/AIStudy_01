@@ -23,49 +23,44 @@ body {
         "Hiragino Sans",
         "Yu Gothic",
         sans-serif;
-    color: var(--text-main);
     background: var(--coffee-cream);
+    color: var(--text-main);
     line-height: 1.8;
 }
-
-/* 共通 */
 
 .container {
     width: min(1100px, 92%);
     margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.4;
-}
-
 /* ヘッダー */
 
 header {
-    background: linear-gradient(
-        135deg,
-        var(--coffee-dark),
-        var(--coffee-main)
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--coffee-dark),
+            var(--coffee-main)
+        );
 
     color: white;
-    padding: 70px 0 60px;
     text-align: center;
+    padding: 70px 0;
+}
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.hero-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.7rem;
+    font-size: 2.8rem;
 }
 
 header p {
-    margin: 16px auto 0;
     max-width: 700px;
-    opacity: 0.95;
+    margin: 16px auto 0;
 }
 
 /* 検索 */
@@ -76,26 +71,21 @@ header p {
 
 .search-area label {
     display: block;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 #searchInput {
     width: 100%;
     max-width: 500px;
-
-    padding: 14px 16px;
-
+    padding: 14px 18px;
     border: none;
     border-radius: 999px;
-
     font-size: 1rem;
-
-    outline: none;
 }
 
 #searchInput:focus {
-    box-shadow: 0 0 0 4px rgba(255,255,255,0.25);
+    outline: none;
 }
 
 /* メイン */
@@ -104,16 +94,17 @@ main {
     padding: 50px 0 70px;
 }
 
-/* セクション見出し */
-
 section h2 {
     color: var(--coffee-main);
+
     border-left: 6px solid var(--coffee-accent);
+
     padding-left: 12px;
-    margin-bottom: 24px;
+
+    margin-bottom: 25px;
 }
 
-/* グリッド */
+/* 一覧 */
 
 .summary-grid,
 .country-grid {
@@ -127,7 +118,7 @@ section h2 {
 }
 
 .country-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 /* カード */
@@ -138,16 +129,14 @@ section h2 {
 
     border: 1px solid var(--border);
 
+    padding: 24px;
+
     border-radius: 20px;
 
-    padding: 22px;
-
     box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.06);
+        0 4px 10px rgba(0,0,0,0.08);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: 0.2s;
 }
 
 .summary-card:hover,
@@ -155,7 +144,7 @@ section h2 {
     transform: translateY(-4px);
 
     box-shadow:
-        0 10px 24px rgba(0, 0, 0, 0.12);
+        0 10px 24px rgba(0,0,0,0.12);
 }
 
 .country-card h3 {
@@ -177,32 +166,61 @@ section h2 {
     border-radius: 999px;
 
     font-size: 0.85rem;
+
     font-weight: bold;
-
-    margin-bottom: 10px;
 }
 
-/* リスト */
+/* 味覚チャート */
 
-ul {
-    padding-left: 20px;
+.chart {
+    margin-top: 20px;
 }
 
-li::marker {
-    color: var(--coffee-accent);
+.meter {
+    margin-bottom: 14px;
 }
+
+.meter span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.bar {
+    height: 8px;
+    background: #e5d9cb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5e3c,
+            #c79a63
+        );
+}
+
+.level-1 { width: 20%; }
+.level-2 { width: 40%; }
+.level-3 { width: 60%; }
+.level-4 { width: 80%; }
+.level-5 { width: 100%; }
 
 /* フッター */
 
 footer {
-    text-align: center;
-    padding: 24px;
-
     background: var(--coffee-dark);
     color: white;
+    text-align: center;
+    padding: 24px;
 }
 
-/* モバイル */
+/* モバイル対応 */
 
 @media (max-width: 768px) {
 
@@ -214,20 +232,11 @@ footer {
         font-size: 2rem;
     }
 
-    header p {
-        font-size: 0.95rem;
-    }
-
     .country-grid {
         grid-template-columns: 1fr;
     }
 
     .summary-grid {
         grid-template-columns: 1fr;
-    }
-
-    .country-card,
-    .summary-card {
-        padding: 18px;
     }
 }

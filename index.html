@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>コーヒー産地別ガイド</title>
-    <meta name="description" content="コーヒーの主要産地ごとの味の特徴や違いをまとめたガイドです。">
+
+    <meta name="description"
+          content="世界の主要コーヒー生産国ごとの味の特徴を紹介するガイドです。">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,28 +14,32 @@
 
 <header>
     <div class="container">
-        <h1>☕ コーヒー産地別ガイド</h1>
+
+        <div class="hero-icon">☕</div>
+
+        <h1>コーヒー産地別ガイド</h1>
 
         <p>
-            世界の主要なコーヒー生産国ごとの味の特徴や違いをまとめた資料です。
+            世界のコーヒー産地を味わいの特徴から比較。
+            フルーティーな豆から重厚なコクを持つ豆まで、
+            生産国ごとの個性をわかりやすくまとめています。
         </p>
 
         <div class="search-area">
-            <label for="searchInput">
-                国名や特徴で検索
-            </label>
+            <label for="searchInput">国名や特徴で検索</label>
+
             <input
                 type="text"
                 id="searchInput"
-                placeholder="例：エチオピア、フルーティー、チョコレート"
-                aria-label="国名や特徴で検索">
+                placeholder="例：エチオピア、フルーティー、チョコレート">
         </div>
+
     </div>
 </header>
 
 <main class="container">
 
-    <section class="summary">
+    <section>
         <h2>味の傾向一覧</h2>
 
         <div class="summary-grid">
@@ -69,166 +75,214 @@
     </section>
 
     <section>
+
         <h2>産地別一覧</h2>
 
-        <div id="countryList" class="country-grid">
+        <div class="country-grid">
 
+            <!-- エチオピア -->
             <article class="country-card">
+
                 <h3>🇪🇹 エチオピア</h3>
                 <p class="tag">フルーティー</p>
 
                 <p>
-                    コーヒー発祥の地として知られています。
-                    華やかな香りとベリー系の果実味、
-                    紅茶のような軽やかな口当たりが特徴です。
+                    華やかな花の香りとベリー系の果実味。
+                    紅茶のような軽やかさが特徴です。
                 </p>
 
-                <ul>
-                    <li>ジャスミンのような香り</li>
-                    <li>ブルーベリー感</li>
-                    <li>明るい酸味</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter">
+                        <span>酸味</span>
+                        <div class="bar"><div class="fill level-5"></div></div>
+                    </div>
+
+                    <div class="meter">
+                        <span>苦味</span>
+                        <div class="bar"><div class="fill level-2"></div></div>
+                    </div>
+
+                    <div class="meter">
+                        <span>コク</span>
+                        <div class="bar"><div class="fill level-3"></div></div>
+                    </div>
+
+                    <div class="meter">
+                        <span>香り</span>
+                        <div class="bar"><div class="fill level-5"></div></div>
+                    </div>
+                </div>
+
             </article>
 
+            <!-- ケニア -->
             <article class="country-card">
+
                 <h3>🇰🇪 ケニア</h3>
                 <p class="tag">果実味豊か</p>
 
                 <p>
-                    カシスや赤ワインを思わせる濃厚な果実味と、
-                    力強い酸味が魅力です。
+                    カシスのような濃厚な果実味と力強い酸味が魅力です。
                 </p>
 
-                <ul>
-                    <li>カシス感</li>
-                    <li>濃厚な香り</li>
-                    <li>しっかりしたコク</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-5"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-5"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- コロンビア -->
             <article class="country-card">
+
                 <h3>🇨🇴 コロンビア</h3>
                 <p class="tag">バランス型</p>
 
                 <p>
-                    甘み・酸味・コクのバランスがよく、
-                    初心者にもおすすめされることが多い産地です。
+                    甘み・酸味・コクのバランスが取れた万能タイプです。
                 </p>
 
-                <ul>
-                    <li>ミルクチョコレート感</li>
-                    <li>ナッツ感</li>
-                    <li>穏やかな酸味</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-4"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- ブラジル -->
             <article class="country-card">
+
                 <h3>🇧🇷 ブラジル</h3>
                 <p class="tag">コク重視</p>
 
                 <p>
-                    世界最大級のコーヒー生産国です。
-                    酸味が控えめで、ナッツやチョコレートのような
-                    まろやかな味わいが特徴です。
+                    ナッツやチョコレートのような風味。
+                    酸味が少なく飲みやすい産地です。
                 </p>
 
-                <ul>
-                    <li>アーモンド感</li>
-                    <li>チョコレート感</li>
-                    <li>まろやかで飲みやすい</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-2"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-3"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- グアテマラ -->
             <article class="country-card">
+
                 <h3>🇬🇹 グアテマラ</h3>
                 <p class="tag">バランス型</p>
 
                 <p>
-                    豊かなコクと甘み、
-                    心地よい酸味を兼ね備えています。
+                    カカオ感とキャラメルのような甘さ、
+                    力強いコクが特徴です。
                 </p>
 
-                <ul>
-                    <li>カカオ感</li>
-                    <li>キャラメル感</li>
-                    <li>しっかりしたボディ</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-4"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- コスタリカ -->
             <article class="country-card">
+
                 <h3>🇨🇷 コスタリカ</h3>
                 <p class="tag">クリーン</p>
 
                 <p>
-                    雑味の少ないクリーンな味わいと、
-                    柑橘系の明るい酸味が特徴です。
+                    柑橘系の爽やかな酸味とクリーンな後味が特徴です。
                 </p>
 
-                <ul>
-                    <li>オレンジ感</li>
-                    <li>はちみつのような甘み</li>
-                    <li>爽やかな後味</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-2"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-4"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- インドネシア -->
             <article class="country-card">
+
                 <h3>🇮🇩 インドネシア（マンデリン）</h3>
                 <p class="tag">重厚なコク</p>
 
                 <p>
-                    深いコクとスパイシーな風味があり、
-                    深煎り好きから高い人気があります。
+                    深煎り好きに人気。
+                    重厚なコクとスパイシーな風味があります。
                 </p>
 
-                <ul>
-                    <li>ダークチョコレート感</li>
-                    <li>スパイス感</li>
-                    <li>酸味控えめ</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-1"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-5"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-5"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-4"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- ベトナム -->
             <article class="country-card">
+
                 <h3>🇻🇳 ベトナム</h3>
                 <p class="tag">苦味強め</p>
 
                 <p>
-                    ロブスタ種を中心に生産されており、
-                    強い苦味と濃厚なコクが特徴です。
+                    ロブスタ種が中心。
+                    力強い苦味と濃厚なコクが特徴です。
                 </p>
 
-                <ul>
-                    <li>しっかりした苦味</li>
-                    <li>濃厚な味わい</li>
-                    <li>比較的高いカフェイン量</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-1"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-5"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-5"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-2"></div></div></div>
+                </div>
+
             </article>
 
+            <!-- PNG -->
             <article class="country-card">
+
                 <h3>🇵🇬 パプアニューギニア</h3>
                 <p class="tag">バランス型</p>
 
                 <p>
-                    フルーティーさとコクを兼ね備えた、
-                    飲みやすい味わいが特徴です。
+                    フルーティーさとコクのバランスが良く、
+                    飲みやすい産地です。
                 </p>
 
-                <ul>
-                    <li>柑橘感</li>
-                    <li>カカオ感</li>
-                    <li>クリーンな後味</li>
-                </ul>
+                <div class="chart">
+                    <div class="meter"><span>酸味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>苦味</span><div class="bar"><div class="fill level-3"></div></div></div>
+                    <div class="meter"><span>コク</span><div class="bar"><div class="fill level-4"></div></div></div>
+                    <div class="meter"><span>香り</span><div class="bar"><div class="fill level-4"></div></div></div>
+                </div>
+
             </article>
 
         </div>
+
     </section>
 
 </main>
 
 <footer>
-    <p>&copy; 2026 コーヒー産地別ガイド</p>
+    <p>☕ コーヒー産地別ガイド</p>
 </footer>
 
-<script src="script.js"></script>
+script.jsscript>
 
 </body>
 </html>
