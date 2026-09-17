@@ -1,18 +1,34 @@
-const searchInput = document.getElementById('searchInput');
-const cards = document.querySelectorAll('.country-card');
+const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener('input', () => {
+searchInput.addEventListener("input", () => {
+
     const keyword = searchInput.value.toLowerCase();
 
-    cards.forEach(card => {
+    const sections = document.querySelectorAll(".region-section");
 
-        const text = card.textContent.toLowerCase();
+    sections.forEach(section => {
 
-        if (text.includes(keyword)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
+        const cards = section.querySelectorAll(".country-card");
+
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+
+            const text = card.textContent.toLowerCase();
+
+            if (text.includes(keyword)) {
+                card.style.display = "";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+        section.style.display =
+            visibleCount > 0 ? "" : "none";
 
     });
+
 });
+``
